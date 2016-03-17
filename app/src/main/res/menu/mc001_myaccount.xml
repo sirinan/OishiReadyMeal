@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<group android:checkableBehavior="single">
+    <item
+        android:id="@+id/m001_Home"
+        android:title="Home" />
+    <item
+        android:id="@+id/m001_Logout"
+        android:title="Logout" />
+    <item
+        android:id="@+id/m001_Favorites"
+        android:title="Favorites" />
+</group>
+    <item android:title="infomation">
+        <menu>
+            <item
+            android:id="@+id/m001_Custommer"
+            android:title="Custommer" />
+            <item
+                android:id="@+id/m001_Fanpage"
+                android:title="Fanpage" />
+        </menu>
+    </item>
+</menu>
