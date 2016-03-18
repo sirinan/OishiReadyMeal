@@ -1,5 +1,7 @@
 package oishi.com.oishi_ready_meal;
 
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.ActionBarActivity;
 import android.app.Activity;
 import android.support.v7.app.ActionBar;
@@ -60,6 +62,7 @@ public class NavigationDrawerFragment extends Fragment {
     private boolean mUserLearnedDrawer;
 
     public NavigationDrawerFragment() {
+
     }
 
     @Override
@@ -180,6 +183,22 @@ public class NavigationDrawerFragment extends Fragment {
                 }
 
                 getActivity().supportInvalidateOptionsMenu(); // calls onPrepareOptionsMenu()
+            }
+
+            @Override
+            public void onDrawerSlide(View drawerView, float slideOffset) {
+                if(slideOffset > 0.5){
+                    getActionBar().setBackgroundDrawable(null);
+                    getActionBar().hide();
+                } else {
+                    getActionBar().show();
+
+                    if(slideOffset < 0.1){
+                        ColorDrawable color=new ColorDrawable();
+                        color.setColor(Color.BLUE);
+                        getActionBar().setBackgroundDrawable(color);
+                    }
+                }
             }
         };
 
